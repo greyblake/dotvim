@@ -213,28 +213,8 @@ set ttymouse=xterm2
 set hidden
 
 if has("gui_running")
-		"tell the term has 256 colors
-		set t_Co=256
-
-    if has("gui_gnome")
-        set term=gnome-256color
-        colorscheme desert
-    else
-        colorscheme vibrantink
-        set guitablabel=%M%t
-        set lines=40
-        set columns=115
-    endif
-    if has("gui_mac") || has("gui_macvim")
-        set guifont=Menlo:h15
-    endif
-    if has("gui_win32") || has("gui_win32s")
-        set guifont=Consolas:h12
-				set enc=utf-8
-    endif
-else
-		"dont load csapprox if we no gui support - silences an annoying warning
-    let g:CSApprox_loaded = 1
+    set lines=999
+    set columns=999
 endif
 
 nmap <silent> <Leader>p :NERDTreeToggle<CR>
@@ -342,7 +322,6 @@ set dir=$HOME/.vim/tmp
 " Sparkup plugin:
 " Mapping used to jump to the next empty tag/attribute.
 let g:sparkupNextMapping = '<C-t>n'
-
 
 " Calculator
 function! BlakeCalc()
