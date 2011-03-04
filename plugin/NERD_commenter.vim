@@ -389,6 +389,8 @@ function s:SetUpForNewFiletype(filetype, forceReset)
         call s:MapDelimiters('#', '')
     elseif a:filetype ==? "lilypond"
         call s:MapDelimiters('%', '')
+    elseif a:filetype ==? "limbo"
+        call s:MapDelimiters('#', '')
     elseif a:filetype ==? "liquid"
         call s:MapDelimiters('{%', '%}')
     elseif a:filetype ==? "lisp"
