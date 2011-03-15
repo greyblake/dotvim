@@ -334,3 +334,7 @@ nmap <C-c> :call BlakeCalc()<CR>
 
 " generate documentation for plugins in ./bundle dir
 call pathogen#helptags()
+
+
+let twitvim_enable_ruby = 1
+
