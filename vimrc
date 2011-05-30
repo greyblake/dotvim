@@ -297,6 +297,8 @@ endfunction
 
 " display line numbers
 set number
+" Disable graphic menu shortcuts to use Alt key in custom shortcuts
+:set winaltkeys=no
 " set color theme
 color rdark
 " look for doc in $HOME/.vim/doc
@@ -305,7 +307,7 @@ helptags ~/.vim/doc
 " Gundo plugin
 nnoremap <Leader>u :GundoToggle<CR>
 let g:gundo_preview_bottom=1
-"
+
 " Bubble selection (it depends on unimpaired plugin)
 nmap <C-k> [e
 nmap <C-Up> [e
@@ -315,6 +317,30 @@ vmap <C-k> [egv
 vmap <C-Up> [egv
 vmap <C-j> ]egv
 vmap <C-Down> ]egv
+
+
+" Emacs like shortcuts for insert mode
+imap <C-b> <Left>
+imap <C-f> <Right>
+imap <C-e> <End>
+imap <C-a> <Esc>I
+imap <C-k> <Esc>c$
+imap <C-u> <Esc>c^
+imap <A-b> <Esc>bi
+imap <A-f> <Esc>ea
+" Also need to process "|"
+let chars = [' ', '!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', ':', ';', '<', '=', '>', '?', '@', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '[', '\', ']', '^', '_', '`', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '{', '}', '~']
+for c in chars
+   if c == ' '
+       let key = '<Space>'
+   else
+       let key = c
+   endif
+   exe 'imap <C-]>' . key . ' <Esc>f' . c . 'i'
+   exe 'imap <C-A-]>' . key . ' <Esc>F' . c . 'i'
+endfor
+
+
 
 " directory for swap files
 set dir=$HOME/.vim/tmp
