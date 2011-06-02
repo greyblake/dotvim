@@ -325,7 +325,7 @@ imap <C-f> <Right>
 imap <C-e> <End>
 imap <C-a> <Esc>I
 imap <C-k> <Esc>c$
-imap <C-u> <Esc>c^
+imap <C-u> <Esc>c^<del>
 imap <A-b> <Esc>bi
 imap <A-f> <Esc>ea
 " Also need to process "|"
@@ -338,6 +338,13 @@ for c in chars
    endif
    exe 'imap <C-]>' . key . ' <Esc>f' . c . 'i'
    exe 'imap <C-A-]>' . key . ' <Esc>F' . c . 'i'
+endfor
+
+" Switching tabs with <Alt>+number
+for num in [1, 2, 3, 4, 5, 6, 7, 8, 9] 
+    execute 'nmap <A-' . num . '> ' . num . 'gt'
+    execute 'map <A-' . num . '>  <Esc>' . num . 'gt'
+    execute 'imap <A-' . num . '> <Esc>' . num . 'gt'
 endfor
 
 
