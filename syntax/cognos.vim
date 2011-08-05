@@ -28,6 +28,7 @@ syn keyword cdmFunction    IsAncestor Level Member TypeInfo Unmatched
 syn keyword cdmFunction    Char Checksum Collapse Concat ConcatSep CountStr ExtractStr I18NConvert I18NString Initcap InStr IsAlpha IsAlphaNumeric IsDigit IsFloat IsInteger IsLower IsNumeric IsUpper Left Length Lower LPad LTrim Replace Right RPad RTrim Soundex SubStr Translate Trim Upper
 syn keyword cdmFunction    AddDaysToInterval AddMonthsToDate AddMonthsToInterval AddSecondsToInterval AddToDate AddYearsToDate AddYearsToInterval DaysBetween FirstOfMonth IsLeapYear IsLeapYearDay IsValidDate IsValidIntervalDS IsValidIntervalYM IsValidTime LastOfMonth MonthsBetween SecondsBetween SysDate
 
+" Variables
 syn match cdmVariable "\$\w*"
 
 " Strings and characters:
@@ -39,9 +40,21 @@ syn match cdmNumber		"-\=\<\d*\.\=[0-9_]\>"
 
 " Comments:
 syn match cdmComment	"//.*$" contains=cdmTodo
-
 syn sync ccomment cdmComment
 
+" Conditions
+
+" Statements
+syn keyword cdmStatement    Return
+
+" Operators
+syn keyword cdmOperator     is in between like not and or
+syn match   cdmOperator     "\%(:=\|=\|!=\|<>\|>=\|>\|<=\|<\)"
+syn match   cdmOperator     "\%(&\|-\|+\|-\|*\|/\)"
+
+
+" Constants
+syn keyword cdmConstant     null
 " Todo.
 syn keyword cdmTodo contained TODO FIXME XXX DEBUG NOTE
 
@@ -56,13 +69,17 @@ if version >= 508 || !exists("did_cdm_syn_inits")
     command -nargs=+ HiLink hi def link <args>
   endif
 
-  HiLink cdmComment	Comment
   HiLink cdmNumber	Number
   HiLink cdmSpecial	Special
   HiLink cdmString	String
   HiLink cdmTodo	Todo
   HiLink cdmVariable    PreProc
   HiLink cdmFunction    Function
+  HiLink cdmStatement   Statement
+  HiLink cdmOperator    Operator
+  HiLink cdmConstant    Constant
+  HiLink cdmComment	Comment
+
   
   delcommand HiLink
 endif
@@ -74,4 +91,11 @@ let b:current_syntax = "cognos"
 
 
 
+
+= != <> >= > <= <  
+& - + - * /
+   
+   
+
+        
 
