@@ -87,15 +87,3 @@ endif
 let b:current_syntax = "cognos"
 
 " vim: ts=8
-
-
-
-
-
-= != <> >= > <= <  
-& - + - * /
-   
-   
-
-        
-
