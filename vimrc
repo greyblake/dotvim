@@ -304,7 +304,6 @@ color rdark
 " look for doc in $HOME/.vim/doc
 helptags ~/.vim/doc
 
-" Gundo plugin
 nnoremap <Leader>u :GundoToggle<CR>
 let g:gundo_preview_bottom=1
 
@@ -371,3 +370,8 @@ call pathogen#helptags()
 
 let twitvim_enable_ruby = 1
 
+" Python
+let python_highlight_all = 1
+
+" taglist
+nmap <silent> <Leader>b :TlistToggle<CR>
