@@ -375,3 +375,6 @@ let python_highlight_all = 1
 
 " taglist
 nmap <silent> <Leader>b :TlistToggle<CR>
+
+" spell checking
+set spell
