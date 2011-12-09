@@ -378,3 +378,5 @@ nmap <silent> <Leader>b :TlistToggle<CR>
 
 " spell checking
 set spell
+
+set expandtab
