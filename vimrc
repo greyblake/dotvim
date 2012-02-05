@@ -380,3 +380,6 @@ nmap <silent> <Leader>b :TlistToggle<CR>
 set spell
 
 set expandtab
+
+" Remove trailing spaces on save
+autocmd BufWritePre * :%s/\s\+$//e
