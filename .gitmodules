@@ -58,3 +58,9 @@
 [submodule "bundle/abolish"]
 	path = bundle/abolish
 	url = https://github.com/tpope/vim-abolish.git
+[submodule "bundle/vimcommander"]
+	path = bundle/vimcommander
+	url = git://github.com/lpenz/vimcommander.git
+[submodule "bundle/tabular"]
+	path = bundle/tabular
+	url = https://github.com/godlygeek/tabular.git

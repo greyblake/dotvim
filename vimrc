@@ -3,7 +3,7 @@
 set nocompatible
 
 " Use pathogen
-filetype off 
+filetype off
 call pathogen#runtime_append_all_bundles()
 
 
@@ -340,7 +340,7 @@ for c in chars
 endfor
 
 " Switching tabs with <Alt>+number
-for num in [1, 2, 3, 4, 5, 6, 7, 8, 9] 
+for num in [1, 2, 3, 4, 5, 6, 7, 8, 9]
     execute 'nmap <A-' . num . '> ' . num . 'gt'
     execute 'map <A-' . num . '>  <Esc>' . num . 'gt'
     execute 'imap <A-' . num . '> <Esc>' . num . 'gt'
@@ -383,3 +383,8 @@ set expandtab
 
 " Remove trailing spaces on save
 autocmd BufWritePre * :%s/\s\+$//e
+
+
+" Binding for  VimCommander
+noremap <silent> <F11> :cal VimCommanderToggle()<CR>
+
