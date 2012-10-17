@@ -299,8 +299,12 @@ endfunction
 set number
 " Disable graphic menu shortcuts to use Alt key in custom shortcuts
 :set winaltkeys=no
+
 " set color theme
-color solarized
+syntax enable
+set background=dark
+colorscheme solarized
+
 " look for doc in $HOME/.vim/doc
 helptags ~/.vim/doc
 
