@@ -300,7 +300,7 @@ set number
 " Disable graphic menu shortcuts to use Alt key in custom shortcuts
 :set winaltkeys=no
 " set color theme
-color rdark
+color solarized
 " look for doc in $HOME/.vim/doc
 helptags ~/.vim/doc
 
@@ -386,5 +386,9 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 
 " Binding for  VimCommander
-noremap <silent> <F11> :cal VimCommanderToggle()<CR>
+noremap <silent> <F11> :call VimCommanderToggle()<CR>
 
+" Smartdict
+let g:SmartdictFromLang='en'
+let g:SmartdictToLang='ru'
+let g:SmartdictDriver='lingvo_yandex'
