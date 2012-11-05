@@ -40,9 +40,6 @@
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
 	url = git://github.com/tpope/vim-fugitive.git
-[submodule "bundle/task-list"]
-	path = bundle/task-list
-	url = git://github.com/vim-scripts/TaskList.vim.git
 [submodule "bundle/vim-coffee-script"]
 	path = bundle/vim-coffee-script
 	url = git://github.com/kchmck/vim-coffee-script.git
@@ -51,7 +48,7 @@
         url = https://github.com/ecomba/vim-ruby-refactoring.git
 [submodule "bundle/vim-easymotion"]
         path = bundle/vim-easymotion
-        url = https://github.com/Lokaltog/vim-easymotion.git 
+        url = https://github.com/Lokaltog/vim-easymotion.git
 [submodule "bundle/command-t"]
 	path = bundle/command-t
 	url = git://git.wincent.com/command-t.git
