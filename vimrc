@@ -295,6 +295,12 @@ endfunction
 
 
 
+" hide menu bar
+:set guioptions-=m
+
+" hide toolbar
+:set guioptions-=T
+
 " display line numbers
 set number
 " Disable graphic menu shortcuts to use Alt key in custom shortcuts
