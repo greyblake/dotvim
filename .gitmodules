@@ -71,3 +71,9 @@
 	path = bundle/open-browser.vim
 	url = git://github.com/tyru/open-browser.vim.git
 
+[submodule "bundle/vim-colors-solarized"]
+	path = bundle/vim-colors-solarized
+	url = git@github.com:greyblake/vim-colors-solarized.git
+[submodule "bundle/vim-esperanto"]
+	path = bundle/vim-esperanto
+	url = git@github.com:greyblake/vim-esperanto.git
