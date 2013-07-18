@@ -402,3 +402,7 @@ noremap <silent> <F11> :call VimCommanderToggle()<CR>
 let g:SmartdictFromLang='en'
 let g:SmartdictToLang='ru'
 let g:SmartdictDriver='lingvo_yandex'
+
+
+" CoffeeScript - 2 space intention
+au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
