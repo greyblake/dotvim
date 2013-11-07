@@ -49,9 +49,6 @@
 [submodule "bundle/vim-easymotion"]
         path = bundle/vim-easymotion
         url = https://github.com/Lokaltog/vim-easymotion.git
-[submodule "bundle/command-t"]
-	path = bundle/command-t
-	url = git://git.wincent.com/command-t.git
 [submodule "bundle/vim-abolish"]
 	path = bundle/vim-abolish
 	url = https://github.com/tpope/vim-abolish.git
@@ -73,7 +70,10 @@
 
 [submodule "bundle/vim-colors-solarized"]
 	path = bundle/vim-colors-solarized
-	url = git@github.com:greyblake/vim-colors-solarized.git
+        url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "bundle/vim-esperanto"]
 	path = bundle/vim-esperanto
 	url = git@github.com:greyblake/vim-esperanto.git
+[submodule "bundle/vim-elixir"]
+	path = bundle/vim-elixir
+	url = https://github.com/elixir-lang/vim-elixir.git
