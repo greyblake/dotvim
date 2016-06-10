@@ -308,8 +308,16 @@ set number
 
 " set color theme
 syntax enable
-set background=dark
 colorscheme solarized
+
+set background=dark
+
+"if strftime("%H") > 18
+"  set background=dark
+"else
+"  set background=light
+"endif
+
 
 " look for doc in $HOME/.vim/doc
 helptags ~/.vim/doc
@@ -406,3 +414,18 @@ let g:SmartdictDriver='lingvo_yandex'
 
 " CoffeeScript - 2 space intention
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+
+" Use ruby 2.1.1 for vim
+command Rvm use ruby-2.1.1
+
+
+"set guifont=Monospace\ 12
+set guifont=Ubuntu\ Mono\ 15
+
+" For jbuilder (in Ruby on Rails)
+au BufNewFile,BufRead *.json.jbuilder set ft=ruby
+
+" Identation
+set expandtab
+set shiftwidth=2
+set softtabstop=2
